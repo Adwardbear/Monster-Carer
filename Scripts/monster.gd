@@ -19,6 +19,7 @@ func _ready():
 	print("Monster loading...")
 	%"Game Systems".hungerAlert.connect(_hungerIcon)
 	%"Game Systems".toiletAlert.connect(_toiletIcon)
+	%"Game Systems".sickAlert.connect(_sickIcon)
 	
 	walkTimer = randf_range(walkTimeMin, walkTimeMax)
 	jumpTimer = randf_range(jumpCooldownMin, jumpCooldownMax)
@@ -40,6 +41,12 @@ func _toiletIcon(toilet):
 		$Toilet.show()
 	else:
 		$Toilet.hide()
+
+func _sickIcon(isSick):
+	if isSick:
+		$Sickness.show()
+	else:
+		$Sickness.hide()
 
 func _physics_process(delta):
 	velocity.y += gravity * delta

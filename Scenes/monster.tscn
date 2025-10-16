@@ -17,12 +17,18 @@ shape = SubResource("RectangleShape2D_mrqeg")
 
 [node name="Hunger" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-40, -88)
+position = Vector2(-48, -88)
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("1_s3gyj")
 
 [node name="Toilet" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(40, -88)
+position = Vector2(48, -88)
 scale = Vector2(0.375, 0.375)
+texture = ExtResource("1_s3gyj")
+
+[node name="Sickness" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -88)
+scale = Vector2(0.35937515, 0.35937512)
 texture = ExtResource("1_s3gyj")

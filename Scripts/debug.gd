@@ -7,7 +7,7 @@ func _ready() -> void:
 
 func _update():
 	$Age.text = "Age: " + str(%"Game Systems".age)
-	$Hunger.text = "Food: " + str(%"Game Systems".hunger)
+	$Hunger.text = "Hunger: " + str(%"Game Systems".hunger)
 	$Toilet.text = "Toilet: " + str(%"Game Systems".toilet)
-	#$Sick.text = str("Sick: " + %"Game Systems".sick)
+	$Sick.text = "Sickness: " + str(%"Game Systems".isSick)
 	$CareMistakes.text = "Care Mistakes: " + str(%"Game Systems".careMistakes)
