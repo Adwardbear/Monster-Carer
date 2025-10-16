@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://cyy4bnmjqyhtr"]
 
-[ext_resource type="PackedScene" uid="uid://fe4oi8n0jpyj" path="res://background.tscn" id="1_tt30a"]
-[ext_resource type="Script" uid="uid://bujgm06j4nstg" path="res://home.gd" id="1_w1mvj"]
-[ext_resource type="PackedScene" uid="uid://b0ik1lsbcgv7r" path="res://monster.tscn" id="2_1ey7h"]
-[ext_resource type="PackedScene" uid="uid://bdt8faanyi3q4" path="res://ui.tscn" id="3_o1ld7"]
-[ext_resource type="PackedScene" uid="uid://cvavh2me03a5u" path="res://debug.tscn" id="4_2ayvv"]
-[ext_resource type="PackedScene" uid="uid://buow2g3cwjk5" path="res://game_systems.tscn" id="6_lxycn"]
+[ext_resource type="PackedScene" uid="uid://fe4oi8n0jpyj" path="res://Scenes/background.tscn" id="1_tt30a"]
+[ext_resource type="Script" uid="uid://bujgm06j4nstg" path="res://Scripts/home.gd" id="1_w1mvj"]
+[ext_resource type="PackedScene" uid="uid://b0ik1lsbcgv7r" path="res://Scenes/monster.tscn" id="2_1ey7h"]
+[ext_resource type="PackedScene" uid="uid://bdt8faanyi3q4" path="res://Scenes/ui.tscn" id="3_o1ld7"]
+[ext_resource type="PackedScene" uid="uid://cvavh2me03a5u" path="res://Scenes/debug.tscn" id="4_2ayvv"]
+[ext_resource type="PackedScene" uid="uid://buow2g3cwjk5" path="res://Scenes/game_systems.tscn" id="6_lxycn"]
 
 [node name="Home" type="Node2D"]
 script = ExtResource("1_w1mvj")
@@ -20,7 +20,7 @@ offset_left = 1048.0
 offset_top = 624.0
 offset_right = 1152.0
 offset_bottom = 648.0
-text = "alpha 1"
+text = "alpha 2"
 horizontal_alignment = 2
 
 [node name="UI" parent="." instance=ExtResource("3_o1ld7")]

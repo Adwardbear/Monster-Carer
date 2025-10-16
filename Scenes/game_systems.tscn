@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://buow2g3cwjk5"]
 
-[ext_resource type="Script" uid="uid://8ytylbslrxxq" path="res://game_systems.gd" id="1_vus7d"]
+[ext_resource type="Script" uid="uid://8ytylbslrxxq" path="res://Scripts/game_systems.gd" id="1_vus7d"]
 
 [node name="Game Systems" type="Node2D"]
 script = ExtResource("1_vus7d")
@@ -15,3 +15,7 @@ wait_time = 5000.0
 
 [node name="SickTimer" type="Timer" parent="."]
 unique_name_in_owner = true
+
+[node name="ToiletTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 300.0

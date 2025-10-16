@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bdt8faanyi3q4"]
 
-[ext_resource type="Script" uid="uid://bhavfi43lopwp" path="res://ui.gd" id="1_fyqef"]
+[ext_resource type="Script" uid="uid://bhavfi43lopwp" path="res://Scripts/ui.gd" id="1_fyqef"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -13,19 +13,19 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "Feed"
 
-[node name="Button2" type="Button" parent="."]
+[node name="Toilet" type="Button" parent="."]
 layout_mode = 0
 offset_left = 80.0
 offset_right = 142.0
 offset_bottom = 31.0
-text = "Loo"
+text = "Toilet"
 
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
 offset_left = 160.0
 offset_right = 222.0
 offset_bottom = 31.0
-text = "Med"
+text = "Meds"
 
 [node name="Button4" type="Button" parent="."]
 layout_mode = 0

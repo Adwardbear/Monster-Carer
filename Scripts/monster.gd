@@ -17,7 +17,8 @@ var jumpTimer = 0.0
 
 func _ready():
 	print("Monster loading...")
-	%"Game Systems".hungerUpdate.connect(_hungerIcon)
+	%"Game Systems".hungerAlert.connect(_hungerIcon)
+	%"Game Systems".toiletAlert.connect(_toiletIcon)
 	
 	walkTimer = randf_range(walkTimeMin, walkTimeMax)
 	jumpTimer = randf_range(jumpCooldownMin, jumpCooldownMax)
@@ -33,6 +34,12 @@ func _hungerIcon(hunger):
 			$Hunger.show()
 		3:
 			$Hunger.show()
+
+func _toiletIcon(toilet):
+	if toilet == 5:
+		$Toilet.show()
+	else:
+		$Toilet.hide()
 
 func _physics_process(delta):
 	velocity.y += gravity * delta

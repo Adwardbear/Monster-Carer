@@ -13,4 +13,12 @@ config_version=5
 config/name="Monster Carer"
 run/main_scene="uid://cyy4bnmjqyhtr"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Sprites/icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://Scenes/": "green",
+"res://Scripts/": "red",
+"res://Sprites/": "blue"
+}
