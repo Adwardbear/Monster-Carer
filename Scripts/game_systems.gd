@@ -1,10 +1,11 @@
 extends Node2D
 
-var age: int = 0
+var age: int = 9
 var hunger: int = 0 #3 max
 var toilet: int = 0 #5 triggers toilet
 var isSick: bool = false
 var careMistakes: int = 0
+var deathAwaits: float = 0.0
 
 signal uiUpdate
 signal hungerAlert
@@ -70,6 +71,7 @@ func _hunger_timeout():
 func _age_timeout():
 	age += 1
 	uiUpdate.emit()
+	_death_check()
 	#code for growing up or emit to monster
 
 func _poo():
@@ -94,3 +96,24 @@ func _sick_timeout():
 	careMistakes += 5
 	%SickTimer.start()
 	uiUpdate.emit()
+
+func _death_check():
+	if age < 10 && careMistakes == 0:
+		return
+	
+	var rand
+	if age < 15:
+		rand = randf_range(0.1, 1.0)
+	elif age < 20:
+		rand = randf_range(1.1, 2.0)
+	elif age < 25:
+		rand = randf_range(2.1, 3.0)
+	else:
+		rand = randf_range(3.1, 4.0)
+		
+	deathAwaits = deathAwaits + rand
+	
+	var deathCheck = deathAwaits + careMistakes
+	
+	if deathCheck >= 100:
+		age = 0 #replace with death event

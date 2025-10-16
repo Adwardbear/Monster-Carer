@@ -5,57 +5,152 @@
 [node name="Debug" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 192.0
-offset_bottom = 128.0
+offset_right = 360.0
+offset_bottom = 288.0
 script = ExtResource("1_1uwqr")
 
 [node name="BG" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_bottom = 0.25
-offset_right = 192.0
-offset_bottom = 96.0
+offset_right = 379.0
+offset_bottom = 190.22223
 color = Color(0.27387273, 0.27387273, 0.27387273, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="Age" type="RichTextLabel" parent="."]
-layout_mode = 0
+[node name="Values" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
 offset_right = 192.0
-offset_bottom = 24.0
+offset_bottom = 173.33333
+bbcode_enabled = true
+text = "[b]Values"
+metadata/_edit_use_anchors_ = true
+
+[node name="Age" type="RichTextLabel" parent="Values"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0058555603
+anchor_bottom = 0.0058555603
+offset_top = 22.758621
+offset_right = 106.0
+offset_bottom = 46.758617
 text = "Age: 0"
 metadata/_edit_use_anchors_ = true
 
-[node name="Hunger" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_top = 24.0
-offset_right = 192.0
-offset_bottom = 48.0
+[node name="Hunger" type="RichTextLabel" parent="Values"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0058555603
+anchor_bottom = 0.0058555603
+offset_top = 46.75862
+offset_right = 96.0
+offset_bottom = 70.75863
 text = "Hunger: 0"
 metadata/_edit_use_anchors_ = true
 
-[node name="Toilet" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_top = 48.0
-offset_right = 192.0
-offset_bottom = 72.0
+[node name="Toilet" type="RichTextLabel" parent="Values"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0058555603
+anchor_bottom = 0.0058555603
+offset_top = 70.75862
+offset_right = 96.0
+offset_bottom = 94.75862
 text = "Toilet: 0"
 metadata/_edit_use_anchors_ = true
 
-[node name="Sick" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_top = 72.0
-offset_right = 192.0
-offset_bottom = 96.0
+[node name="Sick" type="RichTextLabel" parent="Values"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0058555603
+anchor_bottom = 0.0058555603
+offset_top = 94.75862
+offset_right = 112.0
+offset_bottom = 118.75862
 text = "Sickness: 0"
 metadata/_edit_use_anchors_ = true
 
-[node name="CareMistakes" type="RichTextLabel" parent="."]
+[node name="CareMistakes" type="RichTextLabel" parent="Values"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.1875
-anchor_bottom = 0.1875
-offset_top = 72.0
-offset_right = 192.0
-offset_bottom = 96.0
+anchor_top = 0.011711121
+anchor_bottom = 0.011711121
+offset_top = 117.51724
+offset_right = 152.0
+offset_bottom = 141.51726
 text = "Care Mistakes: 0"
 metadata/_edit_use_anchors_ = true
+
+[node name="Death" type="RichTextLabel" parent="Values"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.01756668
+anchor_bottom = 0.01756668
+offset_top = 140.27586
+offset_right = 136.0
+offset_bottom = 164.27586
+text = "Death: 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="Timers" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.53333336
+anchor_right = 0.53333336
+offset_right = 192.0
+offset_bottom = 173.33333
+bbcode_enabled = true
+text = "[b]Timers"
+metadata/_edit_use_anchors_ = true
+
+[node name="Age" type="RichTextLabel" parent="Timers"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.006206894
+anchor_bottom = 0.006206894
+offset_top = 22.758621
+offset_right = 192.0
+offset_bottom = 46.75862
+text = "Age: 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="Hunger" type="RichTextLabel" parent="Timers"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.006206894
+anchor_bottom = 0.006206894
+offset_top = 46.75862
+offset_right = 192.0
+offset_bottom = 70.75862
+text = "Hunger: 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="Toilet" type="RichTextLabel" parent="Timers"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.006206894
+anchor_bottom = 0.006206894
+offset_top = 70.75862
+offset_right = 192.0
+offset_bottom = 94.75862
+text = "Toilet: 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sick" type="RichTextLabel" parent="Timers"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.006206894
+anchor_bottom = 0.006206894
+offset_top = 94.75862
+offset_right = 192.0
+offset_bottom = 118.75862
+text = "Sickness: 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="DebugTimer" type="Timer" parent="."]

@@ -26,5 +26,7 @@ func _medicine_pressed():
 func _debug_pressed():
 	if %Debug.visible == false:
 		%Debug.visible = true
+		%Debug.isDebug = true
 	else:
 		%Debug.visible = false
+		%Debug.isDebug = false
