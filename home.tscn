@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://cyy4bnmjqyhtr"]
+
+[ext_resource type="PackedScene" uid="uid://fe4oi8n0jpyj" path="res://background.tscn" id="1_tt30a"]
+[ext_resource type="Script" uid="uid://bujgm06j4nstg" path="res://home.gd" id="1_w1mvj"]
+[ext_resource type="PackedScene" uid="uid://b0ik1lsbcgv7r" path="res://monster.tscn" id="2_1ey7h"]
+[ext_resource type="PackedScene" uid="uid://bdt8faanyi3q4" path="res://ui.tscn" id="3_o1ld7"]
+[ext_resource type="PackedScene" uid="uid://cvavh2me03a5u" path="res://debug.tscn" id="4_2ayvv"]
+[ext_resource type="PackedScene" uid="uid://buow2g3cwjk5" path="res://game_systems.tscn" id="6_lxycn"]
+
+[node name="Home" type="Node2D"]
+script = ExtResource("1_w1mvj")
+
+[node name="Background" parent="." instance=ExtResource("1_tt30a")]
+
+[node name="Monster" parent="." instance=ExtResource("2_1ey7h")]
+position = Vector2(576, 512)
+
+[node name="Version" type="RichTextLabel" parent="."]
+offset_left = 1048.0
+offset_top = 624.0
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "alpha 1"
+horizontal_alignment = 2
+
+[node name="UI" parent="." instance=ExtResource("3_o1ld7")]
+unique_name_in_owner = true
+offset_left = 384.0
+offset_top = 600.0
+offset_right = 384.0
+offset_bottom = 600.0
+
+[node name="Debug" parent="." instance=ExtResource("4_2ayvv")]
+unique_name_in_owner = true
+visible = false
+offset_left = 960.0
+offset_right = 960.0
+
+[node name="Game Systems" parent="." instance=ExtResource("6_lxycn")]
+unique_name_in_owner = true
+position = Vector2(576, 416)
